@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Guests\GameController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('guest.welcome');
-})->name('home');
+Route::get('/', [GameController::class, 'index'])->name('home');
