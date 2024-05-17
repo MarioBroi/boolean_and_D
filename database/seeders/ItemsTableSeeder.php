@@ -14,17 +14,17 @@ class ItemsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $items = config('items.items');
+        $products = config('items.items');
 
-        foreach ($items as $item) {
+        foreach ($products as $product) {
             $item = new Items();
-            $item->name = $item['name'];
-            $item->slug = $item['slug'];
-            $item->type = $item['type'];
-            $item->category = $item['category'];
-            $item->weight = $item['weight'];
-            $item->cost = $item['cost'];
-            $item->damage_dice = $item['damage_dice'];
+            $item->name = $product['name'];
+            $item->slug = $product['slug'];
+            $item->type = $product['type'];
+            $item->category = $product['category'];
+            $item->weight = $product['weight'];
+            $item->cost = $product['cost'];
+            $item->damage_dice = $product['damage_dice'];
             $item->save();
         }
     }
