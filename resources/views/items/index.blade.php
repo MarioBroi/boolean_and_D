@@ -3,6 +3,7 @@
 @section('main-content')
     <div class="container">
         <div class="row">
+            <a class="btn btn-primary" href="{{ route('item.create') }}">Add</a>
             @foreach ($items as $item)
                 <div class="col-3 g-5">
                     <div class="card">
@@ -14,7 +15,8 @@
                             <p class="card-text">{{ $item->category }}</p>
                             <p class="card-text">Peso: {{ $item->weight }}</p>
                             <p class="card-text">Costo {{ $item->cost }}</p>
-                            <p class="card-text"><a href="{{ route('item.show', ['item' => $item->id]) }}">Show</a></p>
+                            <p class="card-text"><a href="{{ route('item.show', ['item' => $item->id]) }}">Show</a>
+                            </p>
                         </div>
                     </div>
 
