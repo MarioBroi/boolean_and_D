@@ -12,6 +12,7 @@ class ItemController extends Controller
      */
     public function index()
     {
+        return view('items.index', ['items' => Item::orderByDesc('id')->paginate(8)]);
     }
 
     /**
@@ -35,7 +36,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return view('items.show', compact('item'));
     }
 
     /**

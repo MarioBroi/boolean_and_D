@@ -22,4 +22,4 @@ Route::get('/data', [GameController::class, 'decodeJson'])->name('data');
 
 Route::resource('/character', CharacterController::class);
 
-Route::resource('/items', ItemController::class);
+Route::resource('/item', ItemController::class);
