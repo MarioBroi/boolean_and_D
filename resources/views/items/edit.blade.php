@@ -2,8 +2,11 @@
 
 @section('main-content')
     <div class="container mt-5">
-        <form action="{{ route('item.store') }}" method="post">
+        <form action="{{ route('item.update', $item) }}" method="post">
             @csrf
+
+            @method('put')
+
             <div class="mb-3">
                 <label for="" class="form-label">Name</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name"
