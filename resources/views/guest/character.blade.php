@@ -16,6 +16,13 @@
                 </div>
                 {{-- /.col --}}
             @empty
+                <div class="col">
+                    <div class="card">
+                        <h4 class="card-title">Sorry, nothing to display</h4>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
             @endforelse
         </div>
         {{-- /.row --}}
