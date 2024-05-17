@@ -3,7 +3,7 @@
 @section('main-content')
     <div class="container">
         <div class="row row-cols-4 row-cols-lg-6 py-3 g-4">
-            @forelse (as)
+            
                 <div class="col">
                     <div class="card">
                         <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
@@ -15,7 +15,7 @@
                     {{-- /.card --}}
                 </div>
                 {{-- /.col --}}
-            @empty
+            
                 <div class="col">
                     <div class="card">
                         <h4 class="card-title">Sorry, nothing to display</h4>
@@ -23,7 +23,7 @@
                     <!-- /.card -->
                 </div>
                 <!-- /.col -->
-            @endforelse
+            
         </div>
         {{-- /.row --}}
     </div>
