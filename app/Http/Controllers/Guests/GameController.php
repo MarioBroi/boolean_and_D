@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Guests;
 
 use App\Http\Controllers\Controller;
-use App\Models\GameModel;
+use App\Models\Items;
 use Illuminate\Http\Request;
 
 class GameController extends Controller
@@ -19,7 +19,7 @@ class GameController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(GameModel $gameModel)
+    public function show(Items $gameModel)
     {
         /* TODO: Insert a View */
     }
