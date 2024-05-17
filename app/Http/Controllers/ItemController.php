@@ -12,7 +12,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        return view('items.index', ['items' => Item::orderByDesc('id')->paginate(8)]);
     }
 
     /**
@@ -20,7 +20,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('items.create');
     }
 
     /**
@@ -28,7 +28,19 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = $request->all();
+
+        $item = new Item();
+        $item->name = $product['name'];
+        $item->slug = $product['slug'];
+        $item->type = $product['type'];
+        $item->category = $product['category'];
+        $item->weight = $product['weight'];
+        $item->cost = $product['cost'];
+        $item->damae_dice = $product['damage_dice'];
+        $item->save();
+
+        return to_route('items.index');
     }
 
     /**
@@ -36,7 +48,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return view('items.show', compact('item'));
     }
 
     /**
