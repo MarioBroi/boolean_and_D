@@ -1,5 +1,37 @@
 @import 'partials/header';
-
 @import 'partials/footer';
 
 @import '~bootstrap/scss/bootstrap';
+
+/* #region WelcomePage */
+
+.welcome-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.welcome-title {
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 2px 2px 3px rgba(191, 191, 191, 0.549);
+
+    .title-text {
+        padding: 1rem 0.5rem 0;
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+.title-bg {
+    background-image: url(../img/welcome-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+/* #endregion WelcomePage */
