@@ -2,7 +2,7 @@
 Creare una web-app per un GDR
 
 ## lavori rimanent
-- [] Fare il layout l'header 
+- [] Fare il layout dell'header 
 - [] Fare il layout del footer
 - [] Fare il layout della Home
 - [] Modificare il seeder e la tabella per i characters
