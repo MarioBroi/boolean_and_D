@@ -9,12 +9,10 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">{{ $character->name }}</h4>
-                        <p class="card-text">Description: {{ $character->description }}</p>
-                        <p class="card-text">Attack: {{ $character->attack }}</p>
-                        <p class="card-text">Defense: {{ $character->defense }}</p>
-                        <p class="card-text">Speed: {{ $character->speed }}</p>
-
+                        <h4 class="card-title">{{ $character->full_name }}</h4>
+                        <p class="card-text">Età: {{ $character->age }}</p>
+                        <p class="card-text">Razza: {{ $character->race }}</p>
+                        <p class="card-text">Classe: {{ $character->class }}</p>
                         <a class="btm btn-dark" href="{{ route('character.edit', $character) }}"> Edit</a>
 
                         <!-- Modal trigger button -->
@@ -65,6 +63,9 @@
 
         </div>
         {{-- /.row --}}
+        <div class="description">
+            <p class="">Description: {{ $character->backstory }}</p>
+        </div>
     </div>
     {{-- /.container --}}
 @endsection
