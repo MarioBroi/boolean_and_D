@@ -2,70 +2,48 @@
 
 @section('main-content')
     <div class="container py-4">
-        <div class="btn btn-secondary  ">
+        <div class="btn btn-secondary">
             <a class="text-decoration-none text-white" href="{{ route('character.index') }}">◀️ Return Characters</a>
         </div>
-        <div class="row row-cols-4 row-cols-lg-6 py-3 g-4">
+        <div class="row py-3 g-4">
             <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">{{ $character->full_name }}</h4>
-                        <p class="card-text">Età: {{ $character->age }}</p>
-                        <p class="card-text">Razza: {{ $character->race }}</p>
-                        <p class="card-text">Classe: {{ $character->class }}</p>
-                        <a class="btm btn-dark" href="{{ route('character.edit', $character) }}"> Edit</a>
-
-                        <!-- Modal trigger button -->
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#modalId-{{ $character->id }}">
-                            Delete
-                        </button>
-
-                        <!-- Modal Body -->
-                        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-                        <div class="modal fade" id="modalId-{{ $character->id }}" tabindex="-1" data-bs-backdrop="static"
-                            data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
-                                role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalTitleId-{{ $character->id }}">
-                                            Attention! Deleting: {{ $character->name }}
-                                        </h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Attention! You are about to delete this record. The
-                                        operation is DESTRUCTIVE
-                                        ❌❌❌</div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                            Close
-                                        </button>
-                                        <form action="{{ route('character.destroy', $character) }}" method="post">
-                                            @csrf
-                                            @method('DELETE')
-
-                                            <button type="submit" class="btn btn-danger">
-                                                Delete
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                <h2>{{ $character->full_name }}</h2>
+                <p><strong>Age:</strong> {{ $character->age }}</p>
+                <p><strong>Race:</strong> {{ $character->race }}</p>
+                <p><strong>Class:</strong> {{ $character->class }}</p>
+                <p><strong>Description:</strong> {{ $character->backstory }}</p>
+                <div class="btn-group" role="group">
+                    <a href="{{ route('character.edit', $character) }}" class="btn btn-dark">Edit</a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#deleteModal-{{ $character->id }}">
+                        Delete
+                    </button>
                 </div>
-                {{-- /.card --}}
             </div>
-            {{-- /.col --}}
-
-        </div>
-        {{-- /.row --}}
-        <div class="description">
-            <p class="">Description: {{ $character->backstory }}</p>
         </div>
     </div>
-    {{-- /.container --}}
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal-{{ $character->id }}" tabindex="-1" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete Character</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete {{ $character->full_name }}?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <form action="{{ route('character.destroy', $character) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
