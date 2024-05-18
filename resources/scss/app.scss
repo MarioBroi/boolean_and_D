@@ -148,4 +148,38 @@
 
 /* /.manage-games */
 
+.features {
+    color: rgb(182, 131, 54);
+    text-align: center;
+    padding: 5rem 0;
+
+    .features-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features-left,
+    .features-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 5rem;
+        width: 400px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(182, 131, 54);
+        padding: 0.5rem 0.5rem;
+    }
+
+    a:hover {
+        border-radius: 15px;
+        background-color: var(--bnd-dark);
+        transition: 0.5s;
+    }
+}
+
 /* #endregion WelcomePage */

@@ -79,24 +79,37 @@
         </section>
         <!-- /.manage-game -->
 
-        <section class="features">
-            <h4>Features</h4>
-            <div>
-                <h6>
-                    Character Builder:
-                </h6>
-                <p>
-                    Create detailed characters with ease, including custom stats, equipment, and abilities.
-                </p>
-                <h6>
-                    Items Library:
-                </h6>
-                <p>
-                    Access a vast collection of items, from clubs to epic handaxe.
-                </p>
-            </div>
-        </section>
-        <!-- /.features -->
+        <div class="welcome-container">
+            <section class="features">
+                <h2>Features</h2>
+                <div class="features-flex">
+                    <div class="features-left">
+                        <a href="">
+                            <h5>
+                                Character Builder:
+                            </h5>
+                            <p>
+                                Create detailed characters with ease, including custom stats, equipment, and abilities.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="features-right">
+                        <a href="">
+                            <h5>
+                                Items Library:
+                            </h5>
+                            <p>
+                                Access a vast collection of items, from clubs to epic handaxe.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.features-flex -->
+
+            </section>
+            <!-- /.features -->
+        </div>
+        <!-- /.welcome-container -->
 
     </div>
     <!-- /.bg-gradient -->
