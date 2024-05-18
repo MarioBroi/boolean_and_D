@@ -6,13 +6,15 @@
             <h2 class="px-4">Characters</h2>
             <a class="btn btn-primary" href="{{ route('character.create') }}">Add</a>
         </div>
-        <div class="row row-cols-4 row-cols-lg-6 py-3 g-4">
+        <div class="row row-cols-4 row-cols-lg-12 py-3 g-4">
             @forelse ($characters as $character)
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">{{ $character->name }}</h4>
-                            <p class="card-text">{{ $character->description }}</p>
+                            <h4 class="card-title">{{ $character->full_name }}</h4>
+                            <p class="card-text">Razza: {{ $character->race }}</p>
+                            <p class="card-text">Livello: {{ $character->level }}</p>
+                            <p class="card-text">Classe: {{ $character->class }}</p>
                             <a href="{{ route('character.show', $character) }}">Views</a>
                             <a class="btm btn-dark" href="{{ route('character.edit', $character) }}"> Edit</a>
 
