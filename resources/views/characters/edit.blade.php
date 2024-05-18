@@ -6,6 +6,9 @@
             <a class="btn btn-secondary text-decoration-none text-white" href="{{ route('characters.index') }}">◀️ Return
                 Characters</a>
         </div>
+        <h1>Edit Character</h1>
+        @include('partials.validation-errors')
+
         <div class="row">
             <section class="">
                 <div class="col-5 d-flex ">
@@ -16,8 +19,12 @@
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" name="name" id="name"
-                                    aria-describedby="nameHelper" placeholder="Name" value="{{ $character->name }}" />
+                                    aria-describedby="nameHelper" placeholder="Name" value="{{ $character->name }}"
+                                    @error('name') is-invalid @enderror value="{{ old('name') }}" required />
                                 <small id="helpId" class="form-text text-muted">Name </small>
+                                @error('name')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="mb-3">

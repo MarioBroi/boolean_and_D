@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Guests;
 
+use App\Http\Requests\StoreCharacterRequest;
+use App\Http\Requests\UpdateCharacterRequest;
 use App\Models\Item;
 use App\Http\Controllers\Controller;
 use App\Models\Character;
@@ -29,12 +31,14 @@ class CharacterController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreCharacterRequest $request)
     {
         //dd($request->all());
-        $data = $request->all();
+        //$data = $request->all();
+        $val_data = $request->validated();
 
-        Character::create($data);
+
+        Character::create($val_data);
         return to_route('characters.index');
     }
 
@@ -58,9 +62,11 @@ class CharacterController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Character $character)
+    public function update(UpdateCharacterRequest $request, Character $character)
     {
+        $val_data = $request->validated();
         $character->update($request->all());
+
 
         return to_route('characters.show', $character);
     }
