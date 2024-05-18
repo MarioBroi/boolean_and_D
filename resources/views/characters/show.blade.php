@@ -2,9 +2,6 @@
 
 @section('main-content')
     <div class="container py-4">
-        <div class="btn btn-secondary">
-            <a class="text-decoration-none text-white" href="{{ route('character.index') }}">◀️ Return Characters</a>
-        </div>
         <div class="row py-3 g-4">
             <div class="col">
                 <h2>{{ $character->full_name }}</h2>
