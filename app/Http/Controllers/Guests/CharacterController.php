@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Guests;
 
+use App\Models\Item;
 use App\Http\Controllers\Controller;
 use App\Models\Character;
 use Illuminate\Http\Request;
@@ -13,7 +14,8 @@ class CharacterController extends Controller
      */
     public function index()
     {
-        //
+        //dd(Item::all());
+        return view('characters.index', ['characters' => Character::all()]);
     }
 
     /**
@@ -21,7 +23,7 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        //
+        return view('characters.create');
     }
 
     /**
@@ -29,7 +31,11 @@ class CharacterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+        $data = $request->all();
+
+        Character::create($data);
+        return to_route('characters.index');
     }
 
     /**
@@ -37,7 +43,8 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
-        //
+        //dd('si vede?');
+        return view('characters.show', compact('character'));
     }
 
     /**
