@@ -10,7 +10,7 @@
 
                     <div class="col-5 d-flex ">
                         <div class="card p-5">
-                            <form action="{{ route('characters.store') }}" method="post">
+                            <form action="{{ route('character.store') }}" method="post">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Name</label>

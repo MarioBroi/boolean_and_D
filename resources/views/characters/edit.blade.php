@@ -3,7 +3,7 @@
 @section('main-content')
     <div class="container py-5">
         <div class=" py-4">
-            <a class="btn btn-secondary text-decoration-none text-white" href="{{ route('characters.index') }}">◀️ Return
+            <a class="btn btn-secondary text-decoration-none text-white" href="{{ route('character.index') }}">◀️ Return
                 Characters</a>
         </div>
         <h1>Edit Character</h1>
@@ -13,7 +13,7 @@
             <section class="">
                 <div class="col-5 d-flex ">
                     <div class="card p-5">
-                        <form action="{{ route('characters.update', $character) }}" method="post">
+                        <form action="{{ route('character.update', $character) }}" method="post">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">

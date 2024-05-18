@@ -3,7 +3,7 @@
 @section('main-content')
     <div class="container py-4">
         <div class="btn btn-secondary  ">
-            <a class="text-decoration-none text-white" href="{{ route('characters.index') }}">◀️ Return Characters</a>
+            <a class="text-decoration-none text-white" href="{{ route('character.index') }}">◀️ Return Characters</a>
         </div>
         <div class="row row-cols-4 row-cols-lg-6 py-3 g-4">
             <div class="col">
@@ -15,7 +15,7 @@
                         <p class="card-text">Defense: {{ $character->defense }}</p>
                         <p class="card-text">Speed: {{ $character->speed }}</p>
 
-                        <a class="btm btn-dark" href="{{ route('characters.edit', $character) }}"> Edit</a>
+                        <a class="btm btn-dark" href="{{ route('character.edit', $character) }}"> Edit</a>
 
                         <!-- Modal trigger button -->
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
@@ -44,7 +44,7 @@
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                             Close
                                         </button>
-                                        <form action="{{ route('characters.destroy', $character) }}" method="post">
+                                        <form action="{{ route('character.destroy', $character) }}" method="post">
                                             @csrf
                                             @method('DELETE')
 

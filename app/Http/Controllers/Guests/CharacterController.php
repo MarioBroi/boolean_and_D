@@ -39,7 +39,7 @@ class CharacterController extends Controller
 
 
         Character::create($val_data);
-        return to_route('characters.index');
+        return to_route('character.index');
     }
 
     /**
@@ -68,7 +68,7 @@ class CharacterController extends Controller
         $character->update($request->all());
 
 
-        return to_route('characters.show', $character);
+        return to_route('character.show', $character);
     }
 
     /**
@@ -78,6 +78,6 @@ class CharacterController extends Controller
     {
         $character->delete();
 
-        return to_route('characters.index');
+        return to_route('character.index');
     }
 }

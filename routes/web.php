@@ -19,4 +19,4 @@ Route::get('/', [GameController::class, 'index'])->name('home');
 
 Route::get('/data', [GameController::class, 'decodeJson'])->name('data');
 
-Route::resource('/characters', CharacterController::class);
+Route::resource('/character', CharacterController::class);

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="d-flex align-items-center py-3">
             <h2 class="px-4">Characters</h2>
-            <a class="btn btn-primary" href="{{ route('characters.create') }}">Add</a>
+            <a class="btn btn-primary" href="{{ route('character.create') }}">Add</a>
         </div>
         <div class="row row-cols-4 row-cols-lg-6 py-3 g-4">
             @forelse ($characters as $character)
@@ -13,8 +13,8 @@
                         <div class="card-body">
                             <h4 class="card-title">{{ $character->name }}</h4>
                             <p class="card-text">{{ $character->description }}</p>
-                            <a href="{{ route('characters.show', $character) }}">Views</a>
-                            <a class="btm btn-dark" href="{{ route('characters.edit', $character) }}"> Edit</a>
+                            <a href="{{ route('character.show', $character) }}">Views</a>
+                            <a class="btm btn-dark" href="{{ route('character.edit', $character) }}"> Edit</a>
 
 
                             <!-- Modal trigger button -->
@@ -45,7 +45,7 @@
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                                 Close
                                             </button>
-                                            <form action="{{ route('characters.destroy', $character) }}" method="post">
+                                            <form action="{{ route('character.destroy', $character) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
 
