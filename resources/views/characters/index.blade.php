@@ -6,7 +6,7 @@
             <h2 class="px-4">Characters</h2>
             <a class="btn btn-primary" href="{{ route('character.create') }}">Add</a>
         </div>
-        <div class="row row-cols-4 row-cols-lg-6 py-3 g-4">
+        <div class="row row-cols-4 row-cols-lg-12 py-3 g-4">
             @forelse ($characters as $character)
                 <div class="col">
                     <div class="card">
