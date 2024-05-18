@@ -1,0 +1,14 @@
+header {
+    background-color: #da0101;
+
+    .nav-link {
+        font-size: 1.15rem;
+        line-height: 6rem;
+        border-bottom: 5px solid transparent;
+    }
+
+    .nav-link:hover {
+        color: #da0101;
+        border-bottom: 5px solid #da0101;
+    }
+}
