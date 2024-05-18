@@ -12,7 +12,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return view('items.index', ['items' => Item::orderByDesc('id')->paginate(8)]);
+        return view('items.index', ['items' => Item::orderByDesc('id')->paginate(15)]);
     }
 
     /**
@@ -37,10 +37,10 @@ class ItemController extends Controller
         $item->category = $product['category'];
         $item->weight = $product['weight'];
         $item->cost = $product['cost'];
-        $item->damae_dice = $product['damage_dice'];
+        $item->damage_dice = $product['damage_dice'];
         $item->save();
 
-        return to_route('items.index');
+        return to_route('item.index');
     }
 
     /**
@@ -56,7 +56,7 @@ class ItemController extends Controller
      */
     public function edit(Item $item)
     {
-        //
+        return view('items.edit', compact('item'));
     }
 
     /**
@@ -64,7 +64,11 @@ class ItemController extends Controller
      */
     public function update(Request $request, Item $item)
     {
-        //
+        $data = $request->all();
+
+        $item->update($data);
+
+        return to_route('item.show', $item->id);
     }
 
     /**
@@ -72,6 +76,8 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        $item->delete();
+
+        return to_route('item.index');
     }
 }
