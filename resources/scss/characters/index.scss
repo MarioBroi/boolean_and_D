@@ -4,10 +4,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    .card-color {
-        background-color: var(--dnb-light);
-    }
-
     .characters-title {
         display: flex;
         justify-content: space-around;
@@ -52,7 +48,6 @@
         font-size: 20px;
     }
 
-
     .characters-buttons,
     .characters-delete {
         text-decoration: none;
@@ -69,5 +64,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .better-view {
+        background-color: var(--dnb-light-50);
+        padding: 1rem;
+        border-radius: 10px;
     }
 }

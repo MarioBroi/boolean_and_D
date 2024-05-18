@@ -10,7 +10,7 @@
             <div class="row row-cols-4 row-cols-lg-12 py-3 g-3">
                 @forelse ($characters as $character)
                     <div class="col">
-                        <div class="card card-color">
+                        <div class="card better-view">
                             <div class="card-body">
                                 <h4 class="card-title character-title">{{ $character->full_name }}</h4>
                                 <p class="card-text character-text">Race: {{ $character->race }}</p>
