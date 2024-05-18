@@ -8,6 +8,7 @@
                 <p><strong>Age:</strong> {{ $character->age }}</p>
                 <p><strong>Race:</strong> {{ $character->race }}</p>
                 <p><strong>Class:</strong> {{ $character->class }}</p>
+                <p><strong>Level:</strong> {{ $character->level }}</p>
                 <p><strong>Description:</strong> {{ $character->backstory }}</p>
                 <div class="btn-group" role="group">
                     <a href="{{ route('character.edit', $character) }}" class="btn btn-dark">Edit</a>

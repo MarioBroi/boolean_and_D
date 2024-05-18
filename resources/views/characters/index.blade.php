@@ -13,9 +13,8 @@
                         <div class="card-body">
                             <h4 class="card-title">{{ $character->full_name }}</h4>
                             <p class="card-text">Razza: {{ $character->race }}</p>
-                            <p class="card-text">Età: {{ $character->age }}</p>
+                            <p class="card-text">Livello: {{ $character->level }}</p>
                             <p class="card-text">Classe: {{ $character->class }}</p>
-                            <p class="card-text">Allineamento: {{ $character->alignment }}</p>
                             <a href="{{ route('character.show', $character) }}">Views</a>
                             <a class="btm btn-dark" href="{{ route('character.edit', $character) }}"> Edit</a>
 
