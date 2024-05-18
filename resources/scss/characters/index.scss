@@ -38,11 +38,11 @@
     }
 
     .character-title {
-        border-bottom: 1px solid var(--dnb-light);
         margin: 0 -1rem;
         padding: 0 1rem;
         font-weight: bold;
         font-size: 25px;
+        text-align: center;
     }
 
     .character-text {
@@ -52,16 +52,17 @@
         font-size: 20px;
     }
 
+
     .characters-buttons,
     .characters-delete {
         text-decoration: none;
         color: var(--dnb-light);
         background-color: var(--dnb-primary);
-        padding: 0.7rem 1rem;
+        padding: 0.7rem;
         border-bottom-right-radius: 15px;
         border-top-left-radius: 15px;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .characters-card-bottom {
