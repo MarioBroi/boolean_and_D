@@ -1,5 +1,219 @@
 @import 'partials/header';
-
 @import 'partials/footer';
 
 @import '~bootstrap/scss/bootstrap';
+
+:root {
+    --bnd-dark: #0d1321;
+}
+
+/* #region WelcomePage */
+
+.welcome-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.welcome-container-small {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.back-gradient {
+    background-image: linear-gradient(to top, #180034 0%, #000e3b 100%);
+}
+
+.title {
+
+    .welcome-title {
+        margin: 0 auto;
+        padding: 3rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgba(255, 255, 255, 0.6);
+        text-shadow: 2px 2px 3px rgba(191, 191, 191, 0.549);
+
+        .title-text {
+            padding: 1rem 0.5rem 0;
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+
+    .title-bg {
+        background-image: url(../img/welcome-bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        height: 500px;
+    }
+}
+
+/* /.title */
+
+.start-today {
+    padding: 2rem 0;
+    height: 420px;
+    display: flex;
+    justify-content: space-between;
+
+    .start-left {
+        width: 480px;
+        color: #9f1111;
+        padding: 4rem 5rem 1rem 0;
+
+        p {
+            font-size: 20px;
+            color: rgb(10, 10, 129);
+        }
+    }
+
+    .start-right {
+        a {
+            text-decoration: none;
+        }
+
+        .card-create {
+            width: 220px;
+            height: 220px;
+            flex-grow: 2;
+            /* padding: 10rem 2rem 6rem; */
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            border-radius: 8px;
+            background-image: url(../img/dragon-icon.png);
+            background-repeat: no-repeat;
+            background-size: 80%;
+            background-position: center;
+            text-align: center;
+
+            p {
+                padding-top: 15rem;
+            }
+        }
+
+        .card-create:hover {
+            width: 240px;
+            height: 320px;
+            color: red;
+            font-size: 20px;
+            background-color: rgba(84, 82, 82, 0.062);
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            transition: 0.5s;
+
+            p {
+                padding-top: 15.8rem;
+            }
+        }
+    }
+}
+
+/* /.start-today */
+
+.wave {
+    color: #000e3b;
+}
+
+.wave-reverse {
+    transform: rotate(3.142rad);
+    margin: -0.1rem auto -0.1rem;
+    color: #180034;
+    background-color: var(--bnd-dark);
+}
+
+.manage-game {
+    padding: 3rem 0;
+    color: rgb(182, 131, 54);
+    text-shadow: 0px 2px 10px rgba(149, 149, 149, 0.375);
+    text-align: center;
+    font-weight: bold;
+
+    p {
+        font-size: 22px;
+        padding-bottom: 2rem;
+    }
+
+    a {
+        border: 1px solid white;
+        background-color: rgba(255, 255, 255, 0.792);
+        padding: 0.5rem 2rem;
+        border-radius: 18px;
+        text-decoration: none;
+        color: #180034;
+        font-size: 20px;
+    }
+}
+
+/* /.manage-games */
+
+.features {
+    color: rgb(182, 131, 54);
+    text-align: center;
+    padding: 5rem 0;
+
+    .features-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features-left,
+    .features-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 5rem;
+        width: 400px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(182, 131, 54);
+        padding: 0.5rem 0.5rem;
+    }
+
+    a:hover {
+        border-radius: 15px;
+        background-color: var(--bnd-dark);
+        transition: 0.5s;
+    }
+}
+
+/* /.features */
+
+.news {
+    color: rgb(182, 131, 54);
+    text-align: center;
+    padding: 5rem 0;
+    width: 700px;
+    margin: 0 auto;
+
+    .newsletter {
+        background-color: var(--bnd-dark);
+        padding: 0.2rem 0.8rem;
+        border: 0;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+    }
+}
+
+.join-community,
+.get-started {
+    text-align: center;
+    color: rgb(182, 131, 54);
+
+    a {
+        color: #9f1111;
+        text-decoration: none;
+    }
+
+    span {
+        color: rgb(182, 131, 54);
+    }
+}
+
+/* #endregion WelcomePage */
