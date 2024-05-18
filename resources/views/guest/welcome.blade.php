@@ -111,6 +111,22 @@
         </div>
         <!-- /.welcome-container -->
 
+        <section class="news">
+            <h2>Latest News</h2>
+            <p>
+                Stay updated with the latest news, updates, and articles from the world of Boolean & Dragons. From new
+                content releases to community spotlights, there's always something happening.
+            </p>
+            <h3>
+                Subscribe to our newsletter
+            </h3>
+            <form action="" method="get">
+                <label for="newsletter">Inserisci la tua e-mail:</label>
+                <input type="email" name="newsletter" id="newsletter" placeholder="test@test.com" class="newsletter">
+            </form>
+        </section>
+        <!-- /.news -->
+
     </div>
     <!-- /.bg-gradient -->
 
@@ -121,14 +137,6 @@
             fill="currentColor"></path>
     </svg>
 
-    <section class="news">
-        <h4>Latest News</h4>
-        <p>
-            Stay updated with the latest news, updates, and articles from the world of Boolean & Dragons. From new
-            content releases to community spotlights, there's always something happening.
-        </p>
-    </section>
-    <!-- /.news -->
 
     <section class="join-community">
         <h4>Join the Community</h4>

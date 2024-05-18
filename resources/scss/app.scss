@@ -61,7 +61,7 @@
 
     .start-left {
         width: 480px;
-        color: red;
+        color: #9f1111;
         padding: 4rem 5rem 1rem 0;
 
         p {
@@ -179,6 +179,24 @@
         border-radius: 15px;
         background-color: var(--bnd-dark);
         transition: 0.5s;
+    }
+}
+
+/* /.features */
+
+.news {
+    color: rgb(182, 131, 54);
+    text-align: center;
+    padding: 5rem 0;
+    width: 700px;
+    margin: 0 auto;
+
+    .newsletter {
+        background-color: var(--bnd-dark);
+        padding: 0.2rem 0.5rem;
+        border: 0;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
     }
 }
 
