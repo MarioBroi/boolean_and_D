@@ -56,32 +56,57 @@
     </div>
     <!-- /.welcome-container-small -->
 
-    <section class="manage-game">
-        <h3>Manage Your Games</h3>
-        <p>
-            Update character sheets in real-time with our game management tools. No more messy paperwork!
-        </p>
-    </section>
-    <!-- /.manage-game -->
+    <svg class="wave-1hkxOo wave" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"
+        preserveAspectRatio="none">
+        <path class="wavePath-haxJK1 animationPaused-2hZ4IO"
+            d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z"
+            fill="currentColor"></path>
+    </svg>
 
-    <section class="features">
-        <h4>Features</h4>
-        <div>
-            <h6>
-                Character Builder:
-            </h6>
-            <p>
-                Create detailed characters with ease, including custom stats, equipment, and abilities.
-            </p>
-            <h6>
-                Items Library:
-            </h6>
-            <p>
-                Access a vast collection of items, from clubs to epic handaxe.
-            </p>
-        </div>
-    </section>
-    <!-- /.features -->
+    <div class="back-gradient">
+
+        <section class="manage-game">
+            <div class="welcome-container">
+                <h2>Manage Your Games</h2>
+                <p>
+                    Update character sheets in real-time with our game management tools. No more messy paperwork!
+                </p>
+                <a href="">
+                    Update
+                </a>
+            </div>
+            <!-- /.welcome-container -->
+        </section>
+        <!-- /.manage-game -->
+
+        <section class="features">
+            <h4>Features</h4>
+            <div>
+                <h6>
+                    Character Builder:
+                </h6>
+                <p>
+                    Create detailed characters with ease, including custom stats, equipment, and abilities.
+                </p>
+                <h6>
+                    Items Library:
+                </h6>
+                <p>
+                    Access a vast collection of items, from clubs to epic handaxe.
+                </p>
+            </div>
+        </section>
+        <!-- /.features -->
+
+    </div>
+    <!-- /.bg-gradient -->
+
+    <svg class="wave-1hkxOo wave-reverse" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"
+        preserveAspectRatio="none">
+        <path class="wavePath-haxJK1 animationPaused-2hZ4IO"
+            d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z"
+            fill="currentColor"></path>
+    </svg>
 
     <section class="news">
         <h4>Latest News</h4>
