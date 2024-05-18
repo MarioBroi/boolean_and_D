@@ -127,6 +127,30 @@
         </section>
         <!-- /.news -->
 
+        <section class="join-community">
+            <h2>Join the Community</h2>
+            <p>
+                Boolean & Dragons isn't just a toolset—it's a community.
+                Join thousands of other players and dungeon masters in our forums, participate in community events, and
+                share your love for roleplaying games.
+            </p>
+            <a href="">Join Now</a>
+            <span> | </span>
+            <a href="">Learn More</a>
+        </section>
+        <!-- /.join-community -->
+
+        <section class="get-started">
+            <h2>Get Started</h2>
+            <p>
+                Ready to embark on your next adventure? Sign up for free and start creating your hero today!
+            </p>
+            <a href="">Sign Up</a>
+            <span> | </span>
+            <a href="">Log In</a>
+        </section>
+        <!-- /.get-started -->
+
     </div>
     <!-- /.bg-gradient -->
 
@@ -136,27 +160,4 @@
             d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z"
             fill="currentColor"></path>
     </svg>
-
-
-    <section class="join-community">
-        <h4>Join the Community</h4>
-        <p>
-            Boolean & Dragons isn't just a toolset—it's a community.
-            Join thousands of other players and dungeon masters in our forums, participate in community events, and
-            share your love for roleplaying games.
-        </p>
-        <a href="">Join Now</a>
-        <a href="">Learn More</a>
-    </section>
-    <!-- /.join-community -->
-
-    <section class="get-ready">
-        <h4>Get Started</h4>
-        <p>
-            Ready to embark on your next adventure? Sign up for free and start creating your hero today!
-        </p>
-        <a href="">Sign Up</a>
-        <a href="">Log In</a>
-    </section>
-    <!-- /.get-ready -->
 @endsection
