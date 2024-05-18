@@ -1,10 +1,13 @@
 @import 'partials/header';
 @import 'partials/footer';
+@import 'characters/index';
 
 @import '~bootstrap/scss/bootstrap';
 
 :root {
     --bnd-dark: #0d1321;
+    --dnb-light: #dccaa9;
+    --dnb-primary: #3d2005;
 }
 
 body {
