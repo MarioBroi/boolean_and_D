@@ -1,41 +1,60 @@
 @extends('layout.app')
 
 @section('main-content')
-    <div class="title-bg">
-        <div class="welcome-container">
-            <div class="title-bg">
-                <img src="/resources/img/welcome-bg.jpg" alt="">
-                <div class="welcome-title">
-                    <h1>Boolean & Dragons: Your Portal to Epic Fantasy Roleplaying</h1>
-                    <p class="title-text">
-                        Welcome to Boolean & Dragons!
-                        Adventure Quest is your ultimate online resource for all things fantasy roleplaying. Dive into a
-                        world
-                        of
-                        adventure, where your imagination is the only limit. Whether you're a seasoned dungeon master or a
-                        fresh-faced
-                        adventurer, we've got everything you need to create and enjoy unforgettable campaigns.
-                    </p>
+    <section class="title">
+        <div class="title-bg">
+            <div class="welcome-container">
+                <div class="title-bg">
+                    <img src="/resources/img/welcome-bg.jpg" alt="">
+                    <div class="welcome-title">
+                        <h1>Boolean & Dragons: Your Portal to Epic Fantasy Roleplaying</h1>
+                        <p class="title-text">
+                            Welcome to Boolean & Dragons!
+                            Adventure Quest is your ultimate online resource for all things fantasy roleplaying. Dive into a
+                            world
+                            of
+                            adventure, where your imagination is the only limit. Whether you're a seasoned dungeon master or
+                            a
+                            fresh-faced
+                            adventurer, we've got everything you need to create and enjoy unforgettable campaigns.
+                        </p>
+                    </div>
+                    <!-- /.welcome-title -->
                 </div>
-                <!-- /.welcome-title -->
+                <!-- /.title-bg -->
             </div>
-            <!-- /.title-bg -->
+            <!-- /.welcome-container -->
         </div>
-        <!-- /.welcome-container -->
-    </div>
-    <!-- /.title-bg -->
-
-
-    <section class="start-today">
-        <h3>Start Your Adventure Today</h3>
-        <p>
-            <a href="">Create Your Character</a>
-            <br>
-            Design your own unique character with our intuitive character builder. Choose from a variety of stats to
-            bring your character to life.
-        </p>
+        <!-- /.title-bg -->
     </section>
-    <!-- /.start-today -->
+    <!-- /.title -->
+
+    <div class="welcome-container-small">
+        <section class="start-today">
+            <div class="start-left">
+                <h2>Start Your Adventure Today</h2>
+                <p>
+                    Design your own unique character with our intuitive character builder. Choose from a variety of stats to
+                    bring your character to life.
+                </p>
+            </div>
+            <!-- /.start-left -->
+            <div class="start-right">
+                <a href="">
+                    <div class="card-create">
+                        <p>
+                            Create Your Character Here
+                            <i class="fa-solid fa-gavel"></i>
+                        </p>
+                    </div>
+                    <!-- /.card -->
+                </a>
+            </div>
+            <!-- /.start-right -->
+        </section>
+        <!-- /.start-today -->
+    </div>
+    <!-- /.welcome-container-small -->
 
     <section class="manage-game">
         <h3>Manage Your Games</h3>
