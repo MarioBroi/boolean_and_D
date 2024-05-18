@@ -52,7 +52,7 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-        //
+        return view('characters.edit', compact('character'));
     }
 
     /**
@@ -60,7 +60,9 @@ class CharacterController extends Controller
      */
     public function update(Request $request, Character $character)
     {
-        //
+        $character->update($request->all());
+
+        return to_route('characters.show', $character);
     }
 
     /**
@@ -68,6 +70,8 @@ class CharacterController extends Controller
      */
     public function destroy(Character $character)
     {
-        //
+        $character->delete();
+
+        return to_route('characters.index');
     }
 }
