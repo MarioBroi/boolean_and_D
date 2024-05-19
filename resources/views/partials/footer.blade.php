@@ -51,7 +51,7 @@
                 </a>
             </li>
         </ul>
-        <p class="copy">Copyright | <i class="fa-solid fa-registered"></i> | Boolean - Class 109 - Group 4</p>
+        <p class="copy">Copyright | <i class="fa-solid fa-registered"></i> | Boolean - Class 119 - Group 4</p>
     </div>
     <!-- /.footer-bottom -->
 </footer>
