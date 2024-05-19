@@ -2,8 +2,7 @@
 
 @section('main-content')
     <div class="characters">
-
-
+        @include('partials.validation-errors')
         <div class="container">
             <div class="container py-5">
                 <div class="row">
@@ -22,6 +21,9 @@
                                         aria-describedby="fullNameHelper" placeholder="Full Name"
                                         value="{{ old('full_name') }}" required />
                                     {{-- <small id="fullNameHelper" class="form-text text-muted">Full Name</small> --}}
+                                    @error('full_name')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="mb-3">
@@ -30,6 +32,9 @@
                                         @error('race') is-invalid @enderror aria-describedby="raceHelper" placeholder="Race"
                                         value="{{ old('race') }}" />
                                     {{-- <small id="raceHelper" class="form-text text-muted">Race</small> --}}
+                                    @error('race')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="mb-3">
@@ -72,6 +77,9 @@
                                         @error('class') is-invalid @enderror aria-describedby="classHelper"
                                         placeholder="Class" value="{{ old('class') }}" />
                                     {{-- <small id="classHelper" class="form-text text-muted">Class</small> --}}
+                                    @error('class')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="mb-3">
