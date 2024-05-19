@@ -17,7 +17,7 @@ class CharacterController extends Controller
     public function index()
     {
         //dd(Item::all());
-        return view('characters.index', ['characters' => Character::all()]);
+        return view('characters.index', ['characters' => Character::orderByDesc('id')->paginate(15)]);
     }
 
     /**
@@ -64,7 +64,7 @@ class CharacterController extends Controller
      */
     public function update(UpdateCharacterRequest $request, Character $character)
     {
-        $val_data = $request->validate();
+        $val_data = $request->validated();
 
         $character->update($val_data);
 

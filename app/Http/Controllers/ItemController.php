@@ -32,7 +32,7 @@ class ItemController extends Controller
     {
         $product = $request->all();
 
-        $val_data = $request->validate();
+        $val_data = $request->validated();
 
         Item::create($val_data);
 
@@ -60,7 +60,7 @@ class ItemController extends Controller
      */
     public function update(UpdateItemRequest $request, Item $item)
     {
-        $val_data = $request->validate();
+        $val_data = $request->validated();
 
         $item->update($val_data);
 
