@@ -58,8 +58,8 @@ header {
 
             .search-text {
                 padding: 0.5rem;
-                border-top: 2px solid var(--dnb-light);
-                border-left: 2px solid var(--dnb-light);
+                border-top: 2px solid var(--bnd-light);
+                border-left: 2px solid var(--bnd-light);
                 border-right: 0;
                 border-bottom: 0;
                 box-shadow: 2px 4px 13px rgba(0, 0, 0, 0.605);
@@ -67,14 +67,14 @@ header {
 
             .search-button {
                 padding: 0.5rem;
-                border-top: 2px solid var(--dnb-light);
+                border-top: 2px solid var(--bnd-light);
                 border-left: 0;
                 border-right: 0;
                 border-bottom: 0;
                 box-shadow: 2px 4px 13px rgba(0, 0, 0, 0.605);
                 margin: 0 0 0 -0.5rem;
                 background-color: lightgray;
-                color: var(--dnb-primary);
+                color: var(--bnd-primary);
 
             }
 
