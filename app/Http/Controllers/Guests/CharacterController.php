@@ -64,11 +64,11 @@ class CharacterController extends Controller
      */
     public function update(UpdateCharacterRequest $request, Character $character)
     {
-        $val_data = $request->validated();
-        $character->update($request->all());
+        $val_data = $request->validate();
 
+        $character->update($val_data);
 
-        return to_route('character.show', $character);
+        return to_route('character.show', $character->id);
     }
 
     /**

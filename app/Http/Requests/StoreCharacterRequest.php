@@ -22,11 +22,19 @@ class StoreCharacterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|min:2|max:25',
-            'description' => 'nullable|max:500',
-            'attack' => 'nullable|max:10',
-            'defense' => 'nullable|max:10',
-            'speed' => 'nullable|max:10',
+            'full_name' => 'required|min:2|max:55',
+            'race' => 'required|min:3|max:20',
+            'class' => 'required|min:3|max:20',
+            'level' => 'nullable|integer|min:1|max:20',
+            'background' => 'nullable|min:3|max:100',
+            'alignment' => 'nullable|min:3|max:20',
+            'strength' => 'nullable|integer|min:1|max:30',
+            'dexterity' => 'nullable|integer|min:1|max:30',
+            'constitution' => 'nullable|integer|min:1|max:30',
+            'intelligence' => 'nullable|integer|min:1|max:30',
+            'wisdom' => 'nullable|integer|min:1|max:30',
+            'charisma' => 'nullable|integer|min:1|max:30',
+            'backstory' => 'nullable|max:1500',
         ];
     }
 }

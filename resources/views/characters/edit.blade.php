@@ -1,8 +1,8 @@
 @extends('layout.app')
 
 @section('main-content')
+    @include('partials.validation-errors')
     <div class="characters">
-
         <div class="container py-5">
             <div class="py-4">
                 <a class="characters-buttons" href="{{ route('character.index') }}"><i class="fa-solid fa-angles-left"></i>
