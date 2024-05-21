@@ -36,7 +36,7 @@ class ItemController extends Controller
 
         Item::create($val_data);
 
-        return to_route('admin.items.index');
+        return to_route('admin.items.index')->with('message', "Item $request->name created successfully");
     }
 
     /**
@@ -64,7 +64,7 @@ class ItemController extends Controller
 
         $item->update($val_data);
 
-        return to_route('admin.items.show', $item->id);
+        return to_route('admin.items.index', $item->id)->with('message', "Item $item->name update successfully");
     }
 
     /**
@@ -74,6 +74,6 @@ class ItemController extends Controller
     {
         $item->delete();
 
-        return to_route('admin.items.index');
+        return to_route('admin.items.index')->with('message', "Item $item->name deleted successfully");
     }
 }

@@ -78,6 +78,6 @@ class CharacterController extends Controller
     {
         $character->delete();
 
-        return to_route('admin.characters.index')->with('message', "Character $character->full_name delete successfully");
+        return to_route('admin.characters.index')->with('message', "Character $character->full_name deleted successfully");
     }
 }

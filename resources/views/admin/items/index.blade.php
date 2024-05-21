@@ -2,7 +2,13 @@
 
 @section('content')
     <div class="container">
-        <a class="btn btn-primary mt-5" href="{{ route('admin.items.create') }}">Add new item</a>
+        <a class="btn btn-primary my-5" href="{{ route('admin.items.create') }}">Add new item</a>
+        @if (session('message'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                {{ session('message') }}
+            </div>
+        @endif
         <div class="row">
             @foreach ($items as $item)
                 <div class="col-3 g-3">
