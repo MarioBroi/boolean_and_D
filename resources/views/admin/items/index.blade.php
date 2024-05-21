@@ -1,24 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    <a class="btn btn-primary" href="{{ route('admin.items.create') }}">Add</a>
     <div class="container">
+        <a class="btn btn-primary mt-5" href="{{ route('admin.items.create') }}">Add new item</a>
         <div class="row">
             @foreach ($items as $item)
-                <div class="col-3 g-5">
+                <div class="col-3 g-3">
                     <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
                         <div class="card-body">
                             <h4 class="card-title">{{ $item->name }}</h4>
-                            <p class="card-text">{{ $item->type }}</p>
-                            <p class="card-text">{{ $item->slug }}</p>
-                            <p class="card-text">{{ $item->category }}</p>
-                            <p class="card-text">Peso: {{ $item->weight }}</p>
-                            <p class="card-text">Costo {{ $item->cost }}</p>
-                            <p class="card-text"><a href="{{ route('admin.items.show', ['item' => $item->id]) }}">Show</a>
-                            <p class="card-text"><a href="{{ route('admin.items.edit', ['item' => $item->id]) }}">Edit</a>
+                            <p class="card-text">Type: {{ $item->type }}</p>
+                            <p class="card-text">Category: {{ $item->category }}</p>
+                            <p class="card-text">Weigth: {{ $item->weight }}</p>
+                            <p class="card-text">Price {{ $item->cost }}</p>
+                            <p class="card-text">
+                                <a href="{{ route('admin.items.show', $item) }}">Show</a>
                             </p>
-
+                            <p class="card-text">
+                                <a href="{{ route('admin.items.edit', $item) }}">Edit</a>
+                            </p>
 
                             <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal"
                                 data-bs-target="#modalId-{{ $item->id }}">

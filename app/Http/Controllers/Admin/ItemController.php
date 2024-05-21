@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
 use App\Models\Item;
-use Illuminate\Http\Request;
 
 class ItemController extends Controller
 {
@@ -45,7 +44,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        return view('items.show', compact('item'));
+        return view('admin.items.show', compact('item'));
     }
 
     /**
@@ -53,7 +52,7 @@ class ItemController extends Controller
      */
     public function edit(Item $item)
     {
-        return view('items.edit', compact('item'));
+        return view('admin.items.edit', compact('item'));
     }
 
     /**
@@ -65,7 +64,7 @@ class ItemController extends Controller
 
         $item->update($val_data);
 
-        return to_route('item.show', $item->id);
+        return to_route('admin.items.show', $item->id);
     }
 
     /**
@@ -75,6 +74,6 @@ class ItemController extends Controller
     {
         $item->delete();
 
-        return to_route('item.index');
+        return to_route('admin.items.index');
     }
 }
