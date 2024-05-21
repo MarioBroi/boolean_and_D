@@ -1,84 +1,20 @@
 .site-header {
-    margin-top: 0;
-    background-image: url("/assets/img/header/mainNav_large_bg_tile.png");
-    background-size: cover;
+    background-image: url("/assets/img/header/nav_bg.png");
+    background-repeat: repeat-x;
+    background-size: contain;
 
-    .container-header {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-
-
-        .header-left {
-            .logo {
-                width: 50px;
-            }
-        }
-
-        .header-middle {
-
-            .header-links {
-                list-style: none;
-                display: flex;
-                align-items: center;
-                margin: 0 auto;
-                height: 80px;
-
-                a {
-                    text-decoration: none;
-                    padding: 0 0.5rem;
-                    color: var(--bnd-light);
-                    font-weight: bolder;
-                    font-size: 25px;
-                }
-
-                a:hover {
-                    background-color: var(--bnd-light-50);
-                    transition: 0.2s;
-                    border-bottom: 5px solid var(--bnd-primary);
-                    padding: 0.5rem 0.5rem;
-                    color: var(--bnd-secondary);
-                }
-            }
-        }
-
-
-        .header-right {
-
-            input:focus,
-            textarea:focus,
-            select:focus {
-                outline: none;
-            }
-
-            .search-text {
-                border-top: 2px solid var(--bnd-light);
-                border-left: 2px solid var(--bnd-light);
-                border-right: 0;
-                border-bottom: 0;
-                box-shadow: 2px 4px 13px rgba(0, 0, 0, 0.605);
-            }
-
-            .search-button {
-                padding: 0.5rem;
-                border-top: 2px solid var(--bnd-light);
-                border-left: 0;
-                border-right: 0;
-                border-bottom: 0;
-                box-shadow: 2px 4px 13px rgba(0, 0, 0, 0.605);
-                margin: 0 0 0 -0.5rem;
-                background-color: lightgray;
-                color: var(--bnd-primary);
-
-            }
-
-            .search-button:hover {
-                font-weight: bold;
-                transition: 0.2s;
-            }
-        }
+    .logo {
+        width: 70px;
     }
+
+    .header-text {
+        color: var(--bnd-light);
+        text-decoration: none;
+    }
+
+    .header-text:hover {
+        color: var(--bnd-secondary);
+        transition: 0.2s;
+    }
+
 }
