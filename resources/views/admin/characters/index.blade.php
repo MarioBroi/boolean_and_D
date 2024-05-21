@@ -26,9 +26,10 @@
 
                                 <div class="characters-card-bottom">
                                     <div>
-                                        <a href="{{ route('character.show', $character) }}"
+                                        <a href="{{ route('admin.characters.show', $character) }}"
                                             class="characters-buttons">Views</a>
-                                        <a class="characters-buttons" href="{{ route('character.edit', $character) }}">
+                                        <a class="characters-buttons"
+                                            href="{{ route('admin.characters.edit', $character) }}">
                                             Edit</a>
                                     </div>
                                     <!-- Modal trigger button -->
@@ -62,7 +63,8 @@
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                                     Close
                                                 </button>
-                                                <form action="{{ route('character.destroy', $character) }}" method="post">
+                                                <form action="{{ route('admin.characters.destroy', $character) }}"
+                                                    method="post">
                                                     @csrf
                                                     @method('DELETE')
 

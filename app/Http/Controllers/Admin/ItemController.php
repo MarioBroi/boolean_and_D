@@ -15,7 +15,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return view('items.index', ['items' => Item::orderByDesc('id')->paginate(15)]);
+        return view('admin.items.index', ['items' => Item::orderByDesc('id')->paginate(15)]);
     }
 
     /**
@@ -23,7 +23,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        return view('items.create');
+        return view('admin.items.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class ItemController extends Controller
 
         Item::create($val_data);
 
-        return to_route('item.index');
+        return to_route('admin.items.index');
     }
 
     /**

@@ -31,6 +31,7 @@ Route::middleware(['auth', 'verified'])
     ->prefix('admin')
     ->group(function () {
         //qua ci andranno le mie rotte admin
+    
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');//admin
     
         Route::resource('items', ItemController::class)->parameters(['items' => 'item:slug']);

@@ -15,8 +15,9 @@
                             <p class="card-text">{{ $item->category }}</p>
                             <p class="card-text">Peso: {{ $item->weight }}</p>
                             <p class="card-text">Costo {{ $item->cost }}</p>
-                            <p class="card-text"><a href="{{ route('item.show', ['item' => $item->id]) }}">Show</a>
-                            <p class="card-text"><a href="{{ route('item.edit', ['item' => $item->id]) }}">Edit</a></p>
+                            <p class="card-text"><a href="{{ route('admin.items.show', ['item' => $item->id]) }}">Show</a>
+                            <p class="card-text"><a href="{{ route('admin.items.edit', ['item' => $item->id]) }}">Edit</a>
+                            </p>
 
 
                             <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal"
@@ -44,7 +45,7 @@
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                                 Close
                                             </button>
-                                            <form action="{{ route('item.destroy', $item) }}" method="post">
+                                            <form action="{{ route('admin.items.destroy', $item) }}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="btn btn-danger">
