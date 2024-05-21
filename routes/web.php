@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CharacterController;
-use App\Http\Controllers\Guests\GameController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ItemController;
+use App\Http\Controllers\Guests\GameController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,15 +31,12 @@ Route::middleware(['auth', 'verified'])
     ->prefix('admin')
     ->group(function () {
         //qua ci andranno le mie rotte admin
-    
-        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');//admin
-    
-        Route::resource('items', ItemController::class)->parameters(['items' => 'item:slug']);
+
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard'); //admin
+
+        Route::resource('items', ItemController::class);
         Route::resource('characters', CharacterController::class);
     });
-
-
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -47,4 +44,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

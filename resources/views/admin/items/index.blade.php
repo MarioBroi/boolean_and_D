@@ -15,8 +15,8 @@
                             <p class="card-text">{{ $item->category }}</p>
                             <p class="card-text">Peso: {{ $item->weight }}</p>
                             <p class="card-text">Costo {{ $item->cost }}</p>
-                            <p class="card-text"><a href="{{ route('admin.items.show', ['item' => $item->id]) }}">Show</a>
-                            <p class="card-text"><a href="{{ route('admin.items.edit', ['item' => $item->id]) }}">Edit</a>
+                            <p class="card-text"><a href="{{ route('admin.items.show', $item) }}">Show</a>
+                            <p class="card-text"><a href="{{ route('admin.items.edit', $item) }}">Edit</a>
                             </p>
 
 
