@@ -36,9 +36,10 @@ class CharacterController extends Controller
         //$data = $request->all();
         $val_data = $request->validated();
 
+        //dd($val_data, $request);
         Character::create($val_data);
 
-        return to_route('admin.characters.index');
+        return to_route('admin.characters.index')->with('message', "Character $request->full_name created successfully");
     }
 
     /**
@@ -67,7 +68,7 @@ class CharacterController extends Controller
 
         $character->update($val_data);
 
-        return to_route('admin.characters.show', $character->id);
+        return to_route('admin.characters.index', $character->id)->with('message', "Character $character->full_name update successfully");
     }
 
     /**
@@ -77,6 +78,6 @@ class CharacterController extends Controller
     {
         $character->delete();
 
-        return to_route('admin.characters.index');
+        return to_route('admin.characters.index')->with('message', "Character $character->full_name delete successfully");
     }
 }

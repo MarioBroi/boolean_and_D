@@ -7,7 +7,16 @@
                 <h1 class="">Characters</h1>
                 <a class="add-button" href="{{ route('admin.characters.create') }}">Add new character</a>
             </div>
+
+            @if (session('message'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    {{ session('message') }}
+                </div>
+            @endif
+
             <div class="row row-cols-4 row-cols-lg-12 py-3 g-3">
+
                 @forelse ($characters as $character)
                     <div class="col">
                         <div class="card better-view">
@@ -27,7 +36,7 @@
                                 <div class="characters-card-bottom">
                                     <div>
                                         <a href="{{ route('admin.characters.show', $character) }}"
-                                            class="characters-buttons">Views</a>
+                                            class="characters-buttons">View</a>
                                         <a class="characters-buttons"
                                             href="{{ route('admin.characters.edit', $character) }}">
                                             Edit</a>
