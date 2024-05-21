@@ -1,7 +1,49 @@
-footer {
-    background-color: black;
+.site-footer {
+    background-color: var(--bnd-dark);
 
-    & ul {
-        line-height: 2.3rem;
+    .footer-container {
+        width: 70%;
+        margin: 0 auto;
+        padding: 5rem 0 1rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        ul {
+            text-decoration: none;
+            list-style: none;
+            color: white;
+        }
+    }
+
+    .footer-bottom {
+        .icons-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 45px auto;
+
+            li {
+                display: inline-block;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgb(160, 160, 160);
+            }
+        }
+
+        .link {
+            text-transform: uppercase;
+        }
+
+        .copy {
+            margin: 0 auto;
+            padding-bottom: 1rem;
+            text-align: center;
+            color: rgb(160, 160, 160);
+        }
     }
 }
