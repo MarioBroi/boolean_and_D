@@ -1,6 +1,6 @@
-@extends('layout.app')
+@extends('layouts.app')
 
-@section('main-content')
+@section('content')
     <section class="title">
         <div class="title-bg">
             <div class="welcome-container">

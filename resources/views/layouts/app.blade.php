@@ -30,7 +30,7 @@
     @include('partials.header')
 
     <main>
-        @yield('main-content')
+        @yield('content')
     </main>
 
     @include('partials.footer')

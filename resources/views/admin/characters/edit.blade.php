@@ -1,6 +1,6 @@
-@extends('layout.app')
+@extends('layouts.app')
 
-@section('main-content')
+@section('content')
     @include('partials.validation-errors')
     <div class="characters">
         <div class="container py-5">

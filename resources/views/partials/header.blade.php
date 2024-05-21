@@ -13,19 +13,12 @@
                 <li>
                     <a class="navbar-brand" href="{{ route('home') }}">Home</a>
                 </li>
-                @php
-                    $links = [
-                        'Characters' => '/character',
-                        'Items' => '/item',
-                        'Your Vault' => '/vault',
-                        'Encounter' => '/encounter',
-                    ];
-                @endphp
-                @foreach ($links as $link => $href)
-                    <li class="">
-                        <a href="{{ $href }}" aria-current="page">{{ $link }}</a>
-                    </li>
-                @endforeach
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.characters.index') }}">{{ __('Character') }}</a>
+                </li>
+
+
+
             </ul>
             <!-- /.header-links -->
         </div>

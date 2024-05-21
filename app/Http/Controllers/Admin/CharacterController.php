@@ -17,7 +17,7 @@ class CharacterController extends Controller
     public function index()
     {
         //dd(Item::all());
-        return view('characters.index', ['characters' => Character::orderByDesc('id')->paginate(15)]);
+        return view('admin.characters.index', ['characters' => Character::orderByDesc('id')->paginate(15)]);
     }
 
     /**

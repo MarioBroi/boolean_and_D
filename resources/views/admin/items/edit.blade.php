@@ -1,10 +1,13 @@
-@extends('layout.app')
+@extends('layouts.app')
 
-@section('main-content')
+@section('content')
     @include('partials.validation-errors')
     <div class="container mt-5">
-        <form action="{{ route('item.store') }}" method="post">
+        <form action="{{ route('item.update', $item) }}" method="post">
             @csrf
+
+            @method('put')
+
             <div class="mb-3">
                 <label for="" class="form-label">Name</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name"

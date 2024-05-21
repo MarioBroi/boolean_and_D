@@ -1,6 +1,6 @@
-@extends('layout.app')
+@extends('layouts.app')
 
-@section('main-content')
+@section('content')
     <a class="btn btn-primary" href="{{ route('item.create') }}">Add</a>
     <div class="container">
         <div class="row">

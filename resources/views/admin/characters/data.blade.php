@@ -1,5 +1,5 @@
-@extends('layout.app')
-@section('main-content')
+@extends('layouts.app')
+@section('content')
     {{-- @dd($itemsData) --}}
     <div class="container">
         <div class="row row-cols-3 row-cols-lg-4 py-3 g-4">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Guests\CharacterController;
 use App\Http\Controllers\Guests\GameController;
 use App\Http\Controllers\ItemController;
@@ -25,13 +26,19 @@ Route::get('/', [GameController::class, 'index'])->name('home');
 
 Route::get('/data', [GameController::class, 'decodeJson'])->name('data');
 
-Route::resource('/character', CharacterController::class);
+Route::middleware(['auth', 'verified'])
+    ->name('admin.')
+    ->prefix('admin')
+    ->group(function () {
+        //qua ci andranno le mie rotte admin
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');//admin
+    
+        Route::resource('items', ItemController::class)->parameters(['items' => 'item:slug']);
+        Route::resource('characters', CharacterController::class);
+    });
 
-Route::resource('/item', ItemController::class);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -39,4 +46,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
