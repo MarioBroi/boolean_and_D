@@ -2,8 +2,7 @@
     <div class="container-header">
         <div class="header-left">
             <a href="{{ route('home') }}">
-                <img src="https://static-00.iconduck.com/assets.00/dungeons-and-dragons-icon-512x492-vw90341y.png"
-                    alt="Boolean and Dragons Logo" class="logo">
+                <img src={{ url('assets\img\header\icon.png') }} alt="Boolean and Dragons Logo" class="logo">
             </a>
         </div>
         <!-- /.header-left -->
