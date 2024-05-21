@@ -21,7 +21,7 @@
                     <p class="character-text">Back story: {{ $character->backstory }}</p>
 
                     <div class="characters-card-bottom" role="group">
-                        <a href="{{ route('character.edit', $character) }}" class="characters-buttons">Edit</a>
+                        <a href="{{ route('admin.characters.edit', $character) }}" class="characters-buttons">Edit</a>
                         <button type="button" class="characters-delete" data-bs-toggle="modal"
                             data-bs-target="#deleteModal-{{ $character->id }}">
                             Delete
@@ -47,7 +47,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <form action="{{ route('character.destroy', $character) }}" method="POST">
+                    <form action="{{ route('admin.characters.destroy', $character) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>

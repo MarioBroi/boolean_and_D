@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
-use App\Models\Item;
-use App\Http\Controllers\Controller;
 use App\Models\Character;
-use Illuminate\Http\Request;
+use App\Models\Item;
 
 class CharacterController extends Controller
 {
@@ -25,7 +24,7 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        return view('characters.create');
+        return view('admin.characters.create');
     }
 
     /**
@@ -37,9 +36,9 @@ class CharacterController extends Controller
         //$data = $request->all();
         $val_data = $request->validated();
 
-
         Character::create($val_data);
-        return to_route('character.index');
+
+        return to_route('admin.characters.index');
     }
 
     /**
@@ -48,7 +47,7 @@ class CharacterController extends Controller
     public function show(Character $character)
     {
         //dd('si vede?');
-        return view('characters.show', compact('character'));
+        return view('admin.characters.show', compact('character'));
     }
 
     /**
@@ -56,7 +55,7 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-        return view('characters.edit', compact('character'));
+        return view('admin.characters.edit', compact('character'));
     }
 
     /**
@@ -68,7 +67,7 @@ class CharacterController extends Controller
 
         $character->update($val_data);
 
-        return to_route('character.show', $character->id);
+        return to_route('admin.characters.show', $character->id);
     }
 
     /**
@@ -78,6 +77,6 @@ class CharacterController extends Controller
     {
         $character->delete();
 
-        return to_route('character.index');
+        return to_route('admin.characters.index');
     }
 }
