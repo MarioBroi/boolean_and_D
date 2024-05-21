@@ -5,7 +5,8 @@
     <div class="characters">
         <div class="container py-5">
             <div class="py-4">
-                <a class="characters-buttons" href="{{ route('character.index') }}"><i class="fa-solid fa-angles-left"></i>
+                <a class="characters-buttons" href="{{ route('admin.characters.index') }}"><i
+                        class="fa-solid fa-angles-left"></i>
                     Return to Characters</a>
             </div>
             <h1>Edit Character</h1>

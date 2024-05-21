@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <a class="btn btn-primary" href="{{ route('item.create') }}">Add</a>
+    <a class="btn btn-primary" href="{{ route('admin.items.create') }}">Add</a>
     <div class="container">
         <div class="row">
             @foreach ($items as $item)

@@ -5,7 +5,7 @@
         <div class="welcome-container">
             <div class="characters-title">
                 <h1 class="">Characters</h1>
-                <a class="add-button" href="{{ route('character.create') }}">Add new character</a>
+                <a class="add-button" href="{{ route('admin.characters.create') }}">Add new character</a>
             </div>
             <div class="row row-cols-4 row-cols-lg-12 py-3 g-3">
                 @forelse ($characters as $character)

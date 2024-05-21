@@ -3,7 +3,7 @@
 @section('content')
     @include('partials.validation-errors')
     <div class="container mt-5">
-        <form action="{{ route('item.update', $item) }}" method="post">
+        <form action="{{ route('admin.items.update', $item) }}" method="post">
             @csrf
 
             @method('put')

@@ -12,7 +12,7 @@
 
                     <div class="col d-flex">
                         <div class="card-create better-view">
-                            <form action="{{ route('character.store') }}" method="post" class="card-create">
+                            <form action="{{ route('admin.characters.store') }}" method="post" class="card-create">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="full_name" class="form-label character-text">Full Name</label>

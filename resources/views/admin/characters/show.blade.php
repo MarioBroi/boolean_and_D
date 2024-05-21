@@ -3,7 +3,8 @@
 @section('content')
     <div class="characters">
         <div class="container py-4">
-            <a class="characters-buttons" href="{{ route('character.index') }}"><i class="fa-solid fa-angles-left"></i> Return
+            <a class="characters-buttons" href="{{ route('admin.characters.index') }}"><i class="fa-solid fa-angles-left"></i>
+                Return
                 Characters</a>
             <div class="row py-3 g-4">
                 <div class="col better-view">

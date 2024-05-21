@@ -3,7 +3,7 @@
 @section('content')
     @include('partials.validation-errors')
     <div class="container mt-5">
-        <form action="{{ route('item.store') }}" method="post">
+        <form action="{{ route('admin.items.store') }}" method="post">
             @csrf
             <div class="mb-3">
                 <label for="" class="form-label">Name</label>

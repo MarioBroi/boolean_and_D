@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Guests;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
