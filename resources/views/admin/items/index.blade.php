@@ -13,6 +13,7 @@
                             <p class="card-text">Category: {{ $item->category }}</p>
                             <p class="card-text">Weigth: {{ $item->weight }}</p>
                             <p class="card-text">Price {{ $item->cost }}</p>
+                            <p class="card-text">Damage dice: {{ $item->damage_dice }}</p>
                             <p class="card-text">
                                 <a href="{{ route('admin.items.show', $item) }}">Show</a>
                             </p>
