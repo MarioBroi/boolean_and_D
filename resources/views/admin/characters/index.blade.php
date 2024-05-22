@@ -24,6 +24,7 @@
                     {{ session('message') }}
                 </div>
             @endif
+            <!-- /.operations alert -->
 
             <div class="row row-cols-4 row-cols-lg-12 pt-3 pb-5 g-3">
 
@@ -71,14 +72,13 @@
                                             <div class="modal-header">
                                                 <h5 class="modal-title fw-bolder fs-4"
                                                     id="modalTitleId-{{ $character->id }}">
-                                                    Attention! Deleting: {{ $character->name }}
+                                                    Attention! Deleting: {{ $character->full_name }}
                                                 </h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body fwp-bold fs-5">Attention! You are about to delete this
-                                                record. The
-                                                operation is DESTRUCTIVE
+                                                record. The operation is DESTRUCTIVE
                                                 ❌❌❌</div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
