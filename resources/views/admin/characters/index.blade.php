@@ -1,12 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="characters">
-        <div class="welcome-container">
-            <div class="characters-title">
-                <h1 class="">Characters</h1>
-                <a class="add-button" href="{{ route('admin.characters.create') }}">Add new character</a>
+    <div class="admin-pages-bg">
+        <div class="container">
+            <div class="row pt-5 admin-text-custom">
+                <div class="col">
+                    <p class="fw-bolder fs-1">Characters</p>
+                </div>
+                <!-- /.col -->
+                <div class="col text-end">
+                    <a class="add-button fw-bolder fs-2 text-decoration-none admin-text-custom"
+                        href="{{ route('admin.characters.create') }}">
+                        Add new character
+                    </a>
+                </div>
+                <!-- /.col -->
             </div>
+            <!-- /.row -->
 
             @if (session('message'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -15,12 +25,12 @@
                 </div>
             @endif
 
-            <div class="row row-cols-4 row-cols-lg-12 py-3 g-3">
+            <div class="row row-cols-4 row-cols-lg-12 pt-3 pb-5 g-3">
 
                 @forelse ($characters as $character)
                     <div class="col">
-                        <div class="card better-view">
-                            <div class="card-body">
+                        <div class="card">
+                            <div class="card-body admin-text-custom fs-5 better-view">
                                 <h4 class="card-title character-title">{{ $character->full_name }}</h4>
                                 <p class="card-text character-text">Race: {{ $character->race }}</p>
                                 <p class="card-text character-text">Level: {{ $character->level }}</p>
@@ -33,22 +43,22 @@
                                 <p class="card-text character-text">CD: {{ $character->cd }}</p>
                                 <p class="card-text character-text">Back story: {{ $character->backstory }}</p>
 
-                                <div class="characters-card-bottom">
-                                    <div>
+                                <div class="row pt-3 text-center">
+                                    <div class="col justify-content-beetwen">
                                         <a href="{{ route('admin.characters.show', $character) }}"
-                                            class="characters-buttons">View</a>
-                                        <a class="characters-buttons"
+                                            class="card-buttons-custom">View</a>
+                                        <a class="card-buttons-custom"
                                             href="{{ route('admin.characters.edit', $character) }}">
                                             Edit</a>
+                                        <!-- Modal trigger button -->
+                                        <button type="button" class="card-buttons-custom" data-bs-toggle="modal"
+                                            data-bs-target="#modalId-{{ $character->id }}">
+                                            Delete
+                                        </button>
                                     </div>
-                                    <!-- Modal trigger button -->
-                                    <button type="button" class="characters-delete" data-bs-toggle="modal"
-                                        data-bs-target="#modalId-{{ $character->id }}">
-                                        Delete
-                                    </button>
+                                    <!-- /.col -->
                                 </div>
-
-
+                                <!-- /.row -->
 
                                 <!-- Modal Body -->
                                 <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
@@ -57,15 +67,17 @@
                                     aria-labelledby="modalTitleId" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
                                         role="document">
-                                        <div class="modal-content">
+                                        <div class="modal-content better-view admin-text-custom">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="modalTitleId-{{ $character->id }}">
+                                                <h5 class="modal-title fw-bolder fs-4"
+                                                    id="modalTitleId-{{ $character->id }}">
                                                     Attention! Deleting: {{ $character->name }}
                                                 </h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
-                                            <div class="modal-body">Attention! You are about to delete this record. The
+                                            <div class="modal-body fwp-bold fs-5">Attention! You are about to delete this
+                                                record. The
                                                 operation is DESTRUCTIVE
                                                 ❌❌❌</div>
                                             <div class="modal-footer">
@@ -85,11 +97,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- /.modal -->
+
                             </div>
+                            <!-- /.card-body -->
                         </div>
-                        {{-- /.card --}}
+                        <!-- /.card -->
                     </div>
-                    {{-- /.col --}}
+                    <!-- /.col -->
                 @empty
                     <div class="col">
                         <div class="card">
@@ -100,9 +115,9 @@
                     <!-- /.col -->
                 @endforelse
             </div>
-            {{-- /.row --}}
+            <!-- /.row -->
         </div>
-        {{-- /.container --}}
+        <!-- /.container -->
     </div>
-    <!-- /.characters -->
+    <!-- /.admin-pages-bg -->
 @endsection

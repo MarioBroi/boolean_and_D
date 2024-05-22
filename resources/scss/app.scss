@@ -1,6 +1,6 @@
 @import 'partials/header';
 @import 'partials/footer';
-@import 'characters/index';
+@import 'admin/items-and-characters.scss';
 
 @import '~bootstrap/scss/bootstrap';
 
@@ -41,7 +41,6 @@ body {
 /* #endregion Home-Title */
 
 /* #region Home-Adventure */
-
 .start-adventure {
     background-color: var(--bnd-light-50);
 
@@ -62,7 +61,6 @@ body {
 /* #endregion Home-Adventure */
 
 /* #region Home-Inside-Waves */
-
 .wave {
     color: var(--bnd-gradient-start);
     background-color: var(--bnd-light-50);
