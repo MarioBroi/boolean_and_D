@@ -26,14 +26,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans text-gray-900 antialiased">
+<body>
 
     @include('partials.header')
-
     <main>
-        @yield('content')
+        @include('partials.home')
     </main>
-
     @include('partials.footer')
 
 </body>
