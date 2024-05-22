@@ -39,7 +39,7 @@
                                 <p class="card-text">Damage dice: {{ $item->damage_dice }}</p>
 
                                 <div class="row pt-3 text-center">
-                                    <div class="col justify-content-beetwen">
+                                    <div class="col">
                                         <a href="{{ route('admin.items.show', $item) }}"
                                             class="card-buttons-custom">View</a>
                                         <a class="card-buttons-custom" href="{{ route('admin.items.edit', $item) }}">
@@ -87,9 +87,9 @@
                                 </div>
                                 <!-- /.modal -->
                             </div>
-                            <!-- /.car-body -->
+                            <!-- /.card-body -->
                         </div>
-                        <!-- /.car -->
+                        <!-- /.card -->
                     </div>
                     <!-- /.col -->
                 @endforeach

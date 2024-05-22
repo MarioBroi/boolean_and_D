@@ -32,20 +32,20 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-body admin-text-custom fs-5 better-view">
-                                <h4 class="card-title character-title">{{ $character->full_name }}</h4>
-                                <p class="card-text character-text">Race: {{ $character->race }}</p>
-                                <p class="card-text character-text">Level: {{ $character->level }}</p>
-                                <p class="card-text character-text">Age: {{ $character->age }}</p>
-                                <p class="card-text character-text">Alignment: {{ $character->alignment }}</p>
-                                <p class="card-text character-text">Health points: {{ $character->health_points }}</p>
-                                <p class="card-text character-text">Class: {{ $character->class }}</p>
-                                <p class="card-text character-text">Sub class: {{ $character->sub_class }}</p>
-                                <p class="card-text character-text">Armour class: {{ $character->armour_class }}</p>
-                                <p class="card-text character-text">CD: {{ $character->cd }}</p>
-                                <p class="card-text character-text">Back story: {{ $character->backstory }}</p>
+                                <h4 class="card-title">{{ $character->full_name }}</h4>
+                                <p class="card-text">Race: {{ $character->race }}</p>
+                                <p class="card-text">Level: {{ $character->level }}</p>
+                                <p class="card-text">Age: {{ $character->age }}</p>
+                                <p class="card-text">Alignment: {{ $character->alignment }}</p>
+                                <p class="card-text">Health points: {{ $character->health_points }}</p>
+                                <p class="card-text">Class: {{ $character->class }}</p>
+                                <p class="card-text">Sub class: {{ $character->sub_class }}</p>
+                                <p class="card-text">Armour class: {{ $character->armour_class }}</p>
+                                <p class="card-text">CD: {{ $character->cd }}</p>
+                                <p class="card-text">Back story: {{ $character->backstory }}</p>
 
                                 <div class="row pt-3 text-center">
-                                    <div class="col justify-content-beetwen">
+                                    <div class="col">
                                         <a href="{{ route('admin.characters.show', $character) }}"
                                             class="card-buttons-custom">View</a>
                                         <a class="card-buttons-custom"
@@ -88,7 +88,6 @@
                                                     method="post">
                                                     @csrf
                                                     @method('DELETE')
-
                                                     <button type="submit" class="btn btn-danger">
                                                         Delete
                                                     </button>
@@ -98,7 +97,6 @@
                                     </div>
                                 </div>
                                 <!-- /.modal -->
-
                             </div>
                             <!-- /.card-body -->
                         </div>
