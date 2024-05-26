@@ -71,7 +71,7 @@
                     @enderror
                 </div>
 
-                <button type="submit" class="btn btn-dark btn-lg mb-5">
+                <button type="submit" class="card-buttons-custom mb-5">
                     Create
                 </button>
 

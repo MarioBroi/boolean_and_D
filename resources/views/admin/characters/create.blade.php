@@ -113,7 +113,7 @@
                     {{-- <small id="backstoryHelper" class="form-text text-muted">Backstory</small> --}}
                 </div>
 
-                <button type="submit" class="characters-buttons">
+                <button type="submit" class="card-buttons-custom  mb-5">
                     Create
                 </button>
 
