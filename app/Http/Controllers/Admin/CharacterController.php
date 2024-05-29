@@ -7,6 +7,7 @@ use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
 use App\Models\Character;
 use App\Models\Item;
+use App\Models\Type;
 
 class CharacterController extends Controller
 {
@@ -16,6 +17,8 @@ class CharacterController extends Controller
     public function index()
     {
         //dd(Item::all());
+
+        $characters = Character::with('type');
         return view('admin.characters.index', ['characters' => Character::orderByDesc('id')->paginate(15)]);
     }
 
@@ -24,7 +27,10 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        return view('admin.characters.create');
+        $types = Type::all();
+        $items = Item::all();
+
+        return view('admin.characters.create', compact('types', 'items'));
     }
 
     /**
