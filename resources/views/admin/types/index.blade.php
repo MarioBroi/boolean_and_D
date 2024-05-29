@@ -26,11 +26,11 @@
             @endif
             <!-- /.operations alert -->
 
-            <div class="row row-cols-4 row-cols-lg-12 pt-3 pb-5 g-3">
+            <div class="row row-cols-4 pt-3 pb-5 g-3">
                 @foreach ($types as $type)
                     <div class="col">
                         <div class="card">
-                            <div class="card-body admin-text-custom fs-5 better-view">
+                            <div class="card-body admin-text-custom fs-5 better-view overflow-auto vh-100">
                                 <h4 class="card-title">{{ $type->name }}</h4>
                                 <p class="card-text">Description: {{ $type->desc }}</p>
 
