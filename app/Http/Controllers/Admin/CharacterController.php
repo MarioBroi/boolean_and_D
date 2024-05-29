@@ -18,7 +18,7 @@ class CharacterController extends Controller
     {
         //dd(Item::all());
 
-        $characters = Character::orderByDesc('id')->with('type')->paginate(15);
+        $characters = Character::orderByDesc('id')->with('type')->paginate(4);
 
         return view('admin.characters.index', compact('characters'));
     }

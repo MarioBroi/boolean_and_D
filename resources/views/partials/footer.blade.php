@@ -36,7 +36,7 @@
             <!-- /.col -->
         </div>
         <!-- /.row -->
-        <p class="py-3 m-0">Copyright | <i class="fa-solid fa-registered"></i> | Boolean - Class 119 - Group 4</p>
+        <p class="py-3 m-0">Copyright | <i class="fa-solid fa-registered"></i> | Boolean - Class 119 - Group 3</p>
         <!-- /.copyrigth -->
     </div>
     <!-- /.container -->

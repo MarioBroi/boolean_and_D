@@ -14,7 +14,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return view('admin.items.index', ['items' => Item::orderByDesc('id')->paginate(15)]);
+        return view('admin.items.index', ['items' => Item::orderByDesc('id')->paginate(4)]);
     }
 
     /**

@@ -95,6 +95,7 @@
                 @endforeach
             </div>
             <!-- /.row -->
+            {{ $items->links('pagination::bootstrap-5') }}
         </div>
         <!-- /.container -->
     </div>
