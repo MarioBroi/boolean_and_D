@@ -3,6 +3,7 @@
 @section('content')
     @include('partials.validation-errors')
     <div class="admin-pages-bg">
+
         <div class="container py-5">
 
             <h1 class="admin-text-custom fw-bolder">New Character</h1>
