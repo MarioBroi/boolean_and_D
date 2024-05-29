@@ -35,7 +35,8 @@
 
                                 <div class="row pt-3 text-center">
                                     <div class="col">
-                                        <a href="{{-- {{ route('admin.type.show', $item) }} --}}" class="card-buttons-custom">View</a>
+                                        <a href="{{ route('admin.types.show', $type) }}"
+                                            class="card-buttons-custom">View</a>
                                         <a class="card-buttons-custom" href="{{-- {{ route('admin.type.edit', $item) }} --}}">
                                             Edit</a>
                                         <!-- Modal trigger button -->
