@@ -21,7 +21,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.types.create');
     }
 
     /**
@@ -29,7 +29,11 @@ class TypeController extends Controller
      */
     public function store(StoreTypeRequest $request)
     {
-        //
+        $val_data = $request->validated();
+
+        Type::create($val_data);
+
+        return to_route('admin.types.index')->with('message', "Type $request->name created successfully");
     }
 
     /**

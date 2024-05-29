@@ -9,7 +9,8 @@
                 </div>
                 <!-- /.col -->
                 <div class="col text-end">
-                    <a class="add-button fw-bolder fs-2 text-decoration-none admin-text-custom" href="{{-- {{ route('admin.type.create') }} --}}">
+                    <a class="add-button fw-bolder fs-2 text-decoration-none admin-text-custom"
+                        href="{{ route('admin.types.create') }}">
                         Add a new type
                     </a>
                 </div>
@@ -37,7 +38,7 @@
                                     <div class="col">
                                         <a href="{{ route('admin.types.show', $type) }}"
                                             class="card-buttons-custom">View</a>
-                                        <a class="card-buttons-custom" href="{{-- {{ route('admin.type.edit', $item) }} --}}">
+                                        <a class="card-buttons-custom" href="{{ route('admin.types.edit', $type) }}">
                                             Edit</a>
                                         <!-- Modal trigger button -->
                                         <button type="button" class="card-buttons-custom" data-bs-toggle="modal"
