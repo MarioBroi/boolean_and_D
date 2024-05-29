@@ -23,7 +23,8 @@ class Character extends Model
         'level',
         'armour_class',
         'cd',
-        'backstory'
+        'backstory',
+        'type_id'
     ];
 
     /**

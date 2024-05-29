@@ -31,6 +31,42 @@
                     @enderror
                 </div>
 
+                <!-- <div class="mb-3">
+                    <label for="type_id" class="form-label">Type</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="type_id"
+                        id="type_id"
+                        aria-describedby="helpId"
+                        placeholder=""
+                    />
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>-->
+
+
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Type</label>
+                    <select
+                        class="form-select form-select-lg"
+                        name=""
+                        id=""
+                    >
+                        <option selected>Select one</option>
+                        
+                        @forelse ($types as $type)
+                            <option value="{{$type->id}}">{{$type->name}}</option>
+                        @empty
+                            <p>Nothing Here!!</p>
+                        @endforelse
+                    </select>
+                </div>
+                @error('type')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                
+
                 <div class="mb-3">
                     <label for="sex" class="form-label character-text">Sex</label>
                     <input type="text" class="form-control character-text" name="sex" id="sex"
