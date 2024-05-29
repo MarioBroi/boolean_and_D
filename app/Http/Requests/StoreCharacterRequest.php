@@ -35,6 +35,8 @@ class StoreCharacterRequest extends FormRequest
             'wisdom' => 'nullable|integer|min:1|max:30',
             'charisma' => 'nullable|integer|min:1|max:30',
             'backstory' => 'nullable|max:1500',
+            'type_id' => 'exists:types,id',
+            'item_id' => 'exists:items,id',
         ];
     }
 }

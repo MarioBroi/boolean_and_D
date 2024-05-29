@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\Guests\CharacterController;
+use App\Http\Controllers\Admin\CharacterController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Guests\GameController;
-use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,13 +27,18 @@ Route::get('/', [GameController::class, 'index'])->name('home');
 
 Route::get('/data', [GameController::class, 'decodeJson'])->name('data');
 
-Route::resource('/character', CharacterController::class);
+Route::middleware(['auth', 'verified'])
+    ->name('admin.')
+    ->prefix('admin')
+    ->group(function () {
+        //qua ci andranno le mie rotte admin
 
-Route::resource('/item', ItemController::class);
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard'); //admin
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+        Route::resource('items', ItemController::class);
+        Route::resource('types', TypeController::class);
+        Route::resource('characters', CharacterController::class);
+    });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
