@@ -19,6 +19,10 @@
                         <a class="nav-link fs-4 link-underline-opacity-75-hover header-text"
                             href="{{ route('admin.items.index') }}">{{ __('Items') }}</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link fs-4 link-underline-opacity-75-hover header-text"
+                            href="{{ route('admin.types.index') }}">{{ __('Types') }}</a>
+                    </li>
                 </ul>
             </div>
             <ul class="navbar-nav ml-auto flex-row gap-2">

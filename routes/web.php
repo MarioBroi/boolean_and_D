@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Guests\GameController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,7 @@ Route::middleware(['auth', 'verified'])
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard'); //admin
 
         Route::resource('items', ItemController::class);
+        Route::resource('types', TypeController::class);
         Route::resource('characters', CharacterController::class);
     });
 
