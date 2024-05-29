@@ -30,9 +30,12 @@
                 @foreach ($types as $type)
                     <div class="col">
                         <div class="card">
-                            <div class="card-body admin-text-custom fs-5 better-view overflow-auto vh-100">
+                            <div class="card-body admin-text-custom fs-5 better-view">
                                 <h4 class="card-title">{{ $type->name }}</h4>
-                                <p class="card-text">Description: {{ $type->desc }}</p>
+                                <p class="card-text">Description:</p>
+                                <div class="overflow-auto" style="height: 300px">
+                                    <p class="card-text">{{ $type->desc }}</p>
+                                </div>
 
                                 <div class="row pt-3 text-center">
                                     <div class="col">
