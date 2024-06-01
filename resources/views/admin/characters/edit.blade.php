@@ -67,6 +67,7 @@
                         <!-- /.age -->
 
                     </form>
+                    <!-- /form -->
 
                 </div>
                 <!-- /.col -->
@@ -115,6 +116,8 @@
                         <!-- /.sub-class -->
 
                     </form>
+                    <!-- /form -->
+
                 </div>
                 <!-- /.col -->
 
@@ -161,6 +164,8 @@
                         <!-- /.backstory -->
 
                     </form>
+                    <!-- /form -->
+
                 </div>
                 <!-- /.col -->
 
@@ -174,6 +179,7 @@
                     Update
                 </button>
             </form>
+            <!-- /form -->
 
         </div>
         <!-- /.container -->

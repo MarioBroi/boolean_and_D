@@ -30,10 +30,7 @@ class ItemController extends Controller
      */
     public function store(StoreItemRequest $request)
     {
-        $product = $request->all();
-
         $val_data = $request->validated();
-
         Item::create($val_data);
 
         return to_route('admin.items.index')->with('message', "Item $request->name created successfully");
@@ -61,7 +58,6 @@ class ItemController extends Controller
     public function update(UpdateItemRequest $request, Item $item)
     {
         $val_data = $request->validated();
-
         $item->update($val_data);
 
         return to_route('admin.items.index', $item->id)->with('message', "Item $item->name update successfully");

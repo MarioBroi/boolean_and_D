@@ -3,11 +3,8 @@
 @section('content')
     @include('partials.validation-errors')
     <div class="admin-pages-bg vh-100">
-
         <div class="container py-5">
-
             <h1 class="admin-text-custom fw-bolder">New Type</h1>
-
             <div class="row">
                 <div class="col">
                     <form action="{{ route('admin.types.store') }}" method="post" class="better-view">
@@ -23,6 +20,7 @@
                         </div>
                         <!-- /.name -->
                     </form>
+                    <!-- /form -->
                 </div>
                 <!-- /.col -->
                 <div class="col">
@@ -39,9 +37,9 @@
                         </div>
                         <!-- /.description -->
                     </form>
+                    <!-- /form -->
                 </div>
                 <!-- /.col -->
-
             </div>
             <!-- /.row -->
 
@@ -51,7 +49,7 @@
                     Create
                 </button>
             </form>
-
+            <!-- /form -->
         </div>
         <!-- /.admin-pages-bg -->
     @endsection

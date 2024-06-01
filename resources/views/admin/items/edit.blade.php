@@ -20,9 +20,7 @@
             <!-- /.row -->
 
             <div class="row row-cols-2 py-5">
-
                 <div class="col">
-
                     <form action="{{ route('admin.items.update', $item) }}" method="post" class="better-view">
                         @csrf
                         @method('put')
@@ -61,6 +59,7 @@
                         <!-- /.category -->
 
                     </form>
+                    <!-- /form -->
                 </div>
                 <!-- /.col -->
 
@@ -104,9 +103,9 @@
                         </div>
                         <!-- /.damage-dice -->
                     </form>
+                    <!-- /form -->
                 </div>
                 <!-- /.col -->
-
             </div>
             <!-- /.row -->
 
@@ -117,6 +116,7 @@
                     Update
                 </button>
             </form>
+            <!-- /form -->
         </div>
         <!-- /.container -->
     </div>

@@ -55,9 +55,12 @@
                         </div>
                         <!-- /.type -->
 
+                    </form>
+                    <!-- /form -->
+
                 </div>
                 <!-- /.col -->
-                </form>
+
 
                 <div class="col">
 

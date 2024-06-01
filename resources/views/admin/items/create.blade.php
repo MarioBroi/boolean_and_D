@@ -3,15 +3,10 @@
 @section('content')
     @include('partials.validation-errors')
     <div class="admin-pages-bg">
-
         <div class="container py-5">
-
             <h1 class="admin-text-custom fw-bolder">New Item</h1>
-
             <div class="row row-cols-2">
-
                 <div class="col">
-
                     <form action="{{ route('admin.items.store') }}" method="post" class="better-view">
                         @csrf
 
@@ -48,15 +43,12 @@
                             @enderror
                         </div>
                         <!-- /.category -->
-
                     </form>
                     <!-- /form -->
-
                 </div>
                 <!-- /.col -->
 
                 <div class="col">
-
                     <form action="{{ route('admin.items.store') }}" method="post" class="better-view">
                         @csrf
 
@@ -96,10 +88,8 @@
 
                     </form>
                     <!-- /form -->
-
                 </div>
                 <!-- /.col -->
-
             </div>
             <!-- /.row -->
 
@@ -110,10 +100,8 @@
                 </button>
             </form>
             <!-- /form -->
-
         </div>
         <!-- /.container -->
-
     </div>
     <!-- /.admin-pages-bg -->
 @endsection
