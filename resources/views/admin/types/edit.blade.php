@@ -32,7 +32,7 @@
                         <div class="mb-3">
                             <label for="" class="form-label fw-bold admin-text-custom">Name</label>
                             <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                                id="name" aria-describedby="helpId" value="{{ $type->name }}" />
+                                id="name" aria-describedby="helpId" value="{{ old('name', $type->name) }}" />
                             <small id="helpId" class="form-text text-muted">Type the type name</small>
                             @error('name')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -53,7 +53,7 @@
                         <div class="mb-3">
                             <label for="desc" class="form-label fw-bold admin-text-custom">Description</label>
                             <textarea class="form-control character-text" name="desc" id="desc" @error('desc') is-invalid @enderror
-                                aria-describedby="descHelper" placeholder="..." style="height: 200px">{{ $type->desc }}</textarea>
+                                aria-describedby="descHelper" placeholder="..." style="height: 200px">{{ old('desc', $type->desc) }}</textarea>
                             <small id="helpId" class="form-text text-muted">Type the type description</small>
                             @error('desc')
                                 <div class="alert alert-danger">{{ $message }}</div>
