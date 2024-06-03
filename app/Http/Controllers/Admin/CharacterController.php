@@ -39,11 +39,8 @@ class CharacterController extends Controller
      */
     public function store(StoreCharacterRequest $request)
     {
-        //dd($request->all());
-        //$data = $request->all();
         $val_data = $request->validated();
 
-        //dd($val_data, $request);
         Character::create($val_data);
 
         return to_route('admin.characters.index')->with('message', "Character $request->full_name created successfully");
@@ -54,7 +51,6 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
-        //dd('si vede?');
         return view('admin.characters.show', compact('character'));
     }
 
@@ -72,7 +68,6 @@ class CharacterController extends Controller
     public function update(UpdateCharacterRequest $request, Character $character)
     {
         $val_data = $request->validated();
-
         $character->update($val_data);
 
         return to_route('admin.characters.index', $character->id)->with('message', "Character $character->full_name update successfully");

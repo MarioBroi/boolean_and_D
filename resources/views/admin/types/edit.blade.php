@@ -39,9 +39,8 @@
                             @enderror
                         </div>
                         <!-- /.name -->
-
                     </form>
-
+                    <!-- /form -->
                 </div>
                 <!-- /.col -->
 
@@ -63,10 +62,9 @@
                         <!-- /.description -->
 
                     </form>
-
+                    <!-- /form -->
                 </div>
                 <!-- /.col -->
-
             </div>
             <!-- /.row -->
 
@@ -79,7 +77,7 @@
                 </button>
 
             </form>
-
+            <!-- /form -->
         </div>
         <!-- /.container -->
     </div>

@@ -78,7 +78,6 @@
                 </div>
             </div>
             <!-- /.modal -->
-
         </div>
         <!-- /.container -->
     </div>

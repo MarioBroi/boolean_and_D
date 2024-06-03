@@ -3,9 +3,9 @@
 use App\Http\Controllers\Admin\CharacterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ItemController;
+use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Guests\GameController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*

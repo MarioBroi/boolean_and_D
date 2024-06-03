@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Type;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreTypeRequest;
 use App\Http\Requests\UpdateTypeRequest;
+use App\Models\Type;
 
 class TypeController extends Controller
 {
@@ -30,7 +31,6 @@ class TypeController extends Controller
     public function store(StoreTypeRequest $request)
     {
         $val_data = $request->validated();
-
         Type::create($val_data);
 
         return to_route('admin.types.index')->with('message', "Type $request->name created successfully");
@@ -49,7 +49,7 @@ class TypeController extends Controller
      */
     public function edit(Type $type)
     {
-        return view('admin.types.edit', compact('type')); 
+        return view('admin.types.edit', compact('type'));
     }
 
     /**
@@ -58,7 +58,6 @@ class TypeController extends Controller
     public function update(UpdateTypeRequest $request, Type $type)
     {
         $val_data = $request->validated();
-
         $type->update($val_data);
 
         return to_route('admin.types.index', $type->id)->with('message', "Type $type->name update successfully");
@@ -70,6 +69,7 @@ class TypeController extends Controller
     public function destroy(Type $type)
     {
         $type->delete();
+
         return to_route('admin.types.index')->with('message', "Type $type->name deleted successfully");
     }
 }
