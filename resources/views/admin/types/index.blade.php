@@ -34,7 +34,7 @@
                                 <h4 class="card-title">{{ $type->name }}</h4>
                                 <p class="card-text">Description:</p>
                                 <div class="overflow-auto" style="height: 300px">
-                                    <p class="card-text">{{ $type->desc }}</p>
+                                    <p class="card-text">{!! nl2br(e(str_replace('###', "\n", $type->desc))) !!}...</p>
                                 </div>
 
                                 <div class="row pt-3 text-center">
