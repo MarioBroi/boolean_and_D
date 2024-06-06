@@ -16,7 +16,7 @@
                     <div class="card">
                         <div class="card-body admin-text-custom fs-5 better-view">
                             <h4 class="card-title">{{ $type->name }}</h4>
-                            <p class="card-text">Type: {{ $type->desc }}</p>
+                            <p class="card-text">{!! nl2br(e(str_replace('###', "\n", $type->desc))) !!}...</p>
                         </div>
                         <!-- /.card-body -->
                     </div>
