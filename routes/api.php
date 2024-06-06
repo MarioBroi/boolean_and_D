@@ -1,9 +1,8 @@
 <?php
 
+use App\Http\Controllers\API\CharacterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Character;
-use App\Http\Controllers\API\CharacterController;
 
 /*
 |--------------------------------------------------------------------------

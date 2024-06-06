@@ -10,7 +10,7 @@ class CharacterController extends Controller
 {
     public function index()
     {
-        $characters = Character::with('type', 'items')->orderbyDesc('id')->paginate();
+        $characters = Character::with('type', 'items')->orderByDesc('id')->paginate(4);
         return response()->json([
             'success' => true,
             'characters' => $characters,
@@ -31,8 +31,5 @@ class CharacterController extends Controller
                 'response' => 'Error 404',
             ]);
         }
-
     }
-
-
 }
